@@ -1,0 +1,76 @@
+/*
+ * Purpose: This sheet stylizes the index.html page.
+ */
+
+ * {
+  box-sizing: border-box;
+  margin: 0;   
+  padding: 0;
+}
+
+
+div#output_area {
+  position: absolute;
+  height: 65%;
+  overflow: auto;
+  left: 10%;
+  width: 80%;
+  padding-top: 40px;
+}
+
+#input_area {
+  position:absolute;
+  height: 30%;
+  width: 67%;
+  margin-left: 10%;
+  bottom: 0;
+  padding: 5px 20px;
+  background-color: rgb(108, 182, 108);
+}
+
+
+
+.username {
+  background: rgb(10, 2, 2);
+  padding: 0px 10px;
+  margin: 0px 2px;
+  color: white;
+}
+
+
+li.nojoin {
+  width: 100%;
+  background: #6cb66c;
+  text-align: center;
+  padding: 10px;
+}
+
+h2 {
+  color: white;
+  text-transform: uppercase;
+}
+
+ul#msglist {
+  list-style: none;
+}
+
+.list {
+  display: flex;
+  align-content: center;
+  padding: 10px;
+  border-bottom: 20px;
+  background: rgba(108, 182, 108, 0.301);
+  margin-bottom: 8px;
+  border-left: 4px solid black;
+}
+
+.ownlist  {
+  display: flex;
+  align-content: stretch;
+  padding: 10px;
+  border-bottom: 20px;
+  background: #787cef;
+  margin-bottom: 8px;
+  border-right: 4px solid black;
+  justify-content: flex-end;
+}
