@@ -1,7 +1,10 @@
 
+// On the basic show the messge to user
 
 let currentUser="";
 
+// Get all data from the mongo collection 
+// Without refresh the page
 function ReteriveMessageData() {
   $.ajax({
     url: '/chats',
@@ -20,13 +23,15 @@ function ReteriveMessageData() {
       
         msgHist +=msg.alias===currentUser?`<li class="ownlist"> ${msg.message}:<b class="username">${msg.alias}</b><br></li>`:`<li class="list"><b class="username">${msg.alias}</b>: ${msg.message}<br></li>`;
       }
+
+      // Add this into the page 
       $('#msglist').html(msgHist);
   }  
 })
 }
 
 
-
+// Send the Message form user to database (Save data into databse)
 function send() {
 
   $.ajax({
@@ -49,6 +54,7 @@ function send() {
 }
 
 
+// Clear the chat as well as the database
 function clearChat() {
   $.ajax({
     url: '/clear',
@@ -56,4 +62,6 @@ function clearChat() {
   });
 }
 
+
+// After this interval page will be refresh 
 setInterval(() => ReteriveMessageData(), 1000);
